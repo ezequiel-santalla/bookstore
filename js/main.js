@@ -1,17 +1,17 @@
 // Book Price
-const bookPrice = 9.99
+const bookPrice = 9.99;
 
 //Book Stock
-const bookStock = 45
+const bookStock = 45;
 
 // Book discounts
-const noDiscount = 1
-const firstDiscount = (1 - 0.10)
-const secondDiscount = (1 - 0.25)
-const thirdDiscount = (1 - 0.35)
+const noDiscount = 1;
+const firstDiscount = (1 - 0.10);
+const secondDiscount = (1 - 0.25);
+const thirdDiscount = (1 - 0.35);
 
-// IVA
-const tax = 1.21
+// TAX
+const tax = 1.21;
 
 alert("Welcome to the Best online BookStore you have ever seen!");
 
@@ -32,7 +32,7 @@ let bookQuantity = parseInt(prompt("How many books do you want?"));
 
 while (bookQuantity > bookStock) { 
   alert(`Our maximum stock is ${bookStock} books.`);
-  bookQuantity = prompt("Please enter another number:")
+  bookQuantity = prompt("Please enter another number:");
 }
 
 // Function
