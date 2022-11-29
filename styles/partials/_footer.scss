@@ -1,0 +1,23 @@
+.footer {
+  background-color: rgb(155, 155, 155);
+  padding: 1.5rem 0rem 0.7rem 0rem;
+  border-top: 0.025rem solid;
+  .footerSection {
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1.2rem;
+    }
+    p {
+      font-size: 0.8rem;
+      margin: 0.5rem 0 0.5rem 0;
+    }
+  }
+  .containerLogos {
+    border-top: 0.025rem solid;
+  }
+  .containerCopyright {
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}

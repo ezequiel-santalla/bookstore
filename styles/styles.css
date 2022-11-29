@@ -1,0 +1,47 @@
+.body {
+  overflow-x: hidden;
+}
+
+.header {
+  background-color: rgb(155, 155, 155);
+}
+
+.logo {
+  width: 7.5rem;
+  margin-left: 7vh;
+}
+
+.logoCart {
+  width: 6.5rem;
+  margin-right: 7vh;
+}
+
+.main {
+  padding: 1rem 0rem 1rem 2.2rem;
+  background-image: url(../../img/backgroundPicture.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main .mainSection h3 {
+  color: rgb(255, 255, 255);
+}
+
+.footer {
+  background-color: rgb(155, 155, 155);
+  padding: 1.5rem 0rem 0.7rem 0rem;
+  border-top: 0.025rem solid;
+}
+.footer .footerSection h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+}
+.footer .footerSection p {
+  font-size: 0.8rem;
+  margin: 0.5rem 0 0.5rem 0;
+}
+.footer .containerLogos {
+  border-top: 0.025rem solid;
+}
+.footer .containerCopyright p {
+  font-size: 0.8rem;
+}/*# sourceMappingURL=styles.css.map */
