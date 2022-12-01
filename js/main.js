@@ -1,16 +1,16 @@
-// Book Price
+//Book Price
 const bookPrice = 9.99;
 
 //Book Stock
 const bookStock = 45;
 
-// Book discounts
+//Book discounts
 const noDiscount = 1;
 const firstDiscount = (1 - 0.10);
 const secondDiscount = (1 - 0.25);
 const thirdDiscount = (1 - 0.35);
 
-// TAX
+//TAX
 const tax = 1.21;
 
 alert("Welcome to the Best online BookStore you have ever seen!");
@@ -35,7 +35,7 @@ while (bookQuantity > bookStock) {
   bookQuantity = prompt("Please enter another number:");
 }
 
-// Function
+//Function
 function priceCalculator(bookQuantity, bookPrice, noDiscount, firstDiscount, secondDiscount, thirdDiscount, tax) {
   if (bookQuantity >= 0 && bookQuantity <= 1) {
     let finalPrice = (bookQuantity * bookPrice * noDiscount * tax)
