@@ -1,17 +1,70 @@
-//Book Price
-const bookPrice = 9.99;
+// Array of catalog books
+const books = [
+  {id: 1, name: "Classic", price: 9.99, stock: 9},
+  {id: 2, name: "Fantasy", price: 10.99, stock: 10},
+  {id: 3, name: "Horror", price: 11.99, stock: 8},
+  {id: 4, name: "Romantic", price: 12.99, stock: 8},
+  {id: 5, name: "Science Fiction", price: 13.99, stock: 10},
+]; 
 
-//Book Stock
-const bookStock = 45;
+// Array of cart books
+const books_cart = []; 
 
-//Book discounts
-const noDiscount = 1;
-const firstDiscount = (1 - 0.10);
-const secondDiscount = (1 - 0.25);
-const thirdDiscount = (1 - 0.35);
+// Define book class
+class Book {
+  constructor (id, name, price, quantity) {
+    this.id = id;
+    this.name = name;
+    this.price = price;
+    this.quantity = quantity;
+    this.tax = 1.21;
+  }
 
-//TAX
-const tax = 1.21;
+  applyTax () {
+    this.price = this.price * this.tax;
+  }
+}
+
+// Declare search boook function
+function searchBook(id) {
+  return (books.find(item => item.id === id) || null);
+}
+
+// Declare add book to the cart function
+function addBook(book) {
+  books_cart.push(book);
+}
+
+// Declare delete book to the cart function
+function deleteBook(id) {
+  let position = books_cart.findIndex(item => item.id === id);
+
+  if (position >= 0) {
+    books_cart.splice(position, 1);
+  } 
+}
+
+// Tour book catalog function
+function tourBook() {
+  let book_content = "";
+
+  for (let book of books) {
+    book_content += book.id + " - " + book.name + " $" + book.price + "\n"; 
+  }
+
+  return book_content;
+}
+
+// Tour book cart function
+function tourBookCart() {
+  let book_content = "";
+
+  for (let book of books_cart) {
+    book_content += book.id + " - " + book.name + " $" + book.price + "\n"; 
+  }
+
+  return book_content;
+}
 
 alert("Welcome to the Best online BookStore you have ever seen!");
 
@@ -19,42 +72,62 @@ let nameEntered = prompt("Please, write your name:");
 
 alert(`Hi ${nameEntered}, nice to meet you!`);
 
-alert(`The price of our books is $9.99 (max 45 copies)
-  
-Here are our discounts:
+// Load the books from the catalog
+let loadBook = true;
 
-1 book = 0%
-2 or 3 books = 10%
-4, 5, or 6 books = 25%
-7 or more books = 35%`);
+// Load the books from the cart
+loadBook = true;
 
-let bookQuantity = parseInt(prompt("How many books do you want?"));
+while (loadBook) {
+  let book_content = tourBook();
 
-while (bookQuantity > bookStock) { 
-  alert(`Our maximum stock is ${bookStock} books.`);
-  bookQuantity = prompt("Please enter another number:");
-}
+  // Book ID
+  let book_ID = parseInt(prompt(`Select the product to add to the cart:\n\n${book_content}`));
 
-//Function
-function priceCalculator(bookQuantity, bookPrice, noDiscount, firstDiscount, secondDiscount, thirdDiscount, tax) {
-  if (bookQuantity >= 0 && bookQuantity <= 1) {
-    let finalPrice = (bookQuantity * bookPrice * noDiscount * tax)
-    return finalPrice.toFixed(2);
-  }
-  else if (bookQuantity >= 2 && bookQuantity <= 3) {
-    let finalPrice = (bookQuantity * bookPrice * firstDiscount * tax)
-    return finalPrice.toFixed(2);
-  }
-  else if (bookQuantity >= 4 && bookQuantity <= 6) {
-    let finalPrice = (bookQuantity * bookPrice * secondDiscount * tax)
-    return finalPrice.toFixed(2);
+  // Search Book
+  let book = searchBook(book_ID);
+
+  // Verify if the selected product is valid
+  if (book != null) {
+    addBook(book);
   }
   else {
-    let finalPrice = (bookQuantity * bookPrice * thirdDiscount * tax)
-    return finalPrice.toFixed(2);
+    alert(`The book with the entered ID: ${book_ID} does not exist!`)
   }
+
+  // Ask if the buyer wants to add more books to the cart
+  loadBook = confirm("Do you want to add another book to the cart?");
 }
 
-alert("Your final price is: $" + priceCalculator(bookQuantity, bookPrice, noDiscount, firstDiscount, secondDiscount, thirdDiscount, tax));
+// Delete the books from the cart
+loadBook = true;
 
-alert("Thanks for your visit, we hope you come back soon!");
+while (loadBook) {
+  let book_content = tourBookCart();
+
+  // Book ID
+  let book_ID = parseInt(prompt(`Select the product to delete from the cart: ("0" to exit)\n\n${book_content}`));
+
+  if (book_ID > 0) {
+    deleteBook(book_ID);
+  }
+  else {
+    alert(`The book with the entered ID: ${book_ID} does not exist!`)
+  }
+
+  // Ask if the buyer wants to add more books to the cart
+  loadBook = confirm("Do you want to delete another book to the cart?");
+}
+
+let totalToPay = 0;
+let book_content = "";
+
+for (let bk of books_cart) {
+  let book = new Book(bk.id, bk.name, bk.price, bk.stock);
+  book.applyTax();
+  book_content += book.id + " - " + book.name + " $" + book.price + "\n";
+  totalToPay += book.price;
+}
+
+// Total to pay 
+alert(`Books selected:\n\n${book_content} \n\nTotal to pay: $${totalToPay.toFixed(2)}`);
