@@ -16,110 +16,85 @@
       <div class="col-6 d-flex justify-content-start align-items-center pt-3 pe-1 pb-3">
         <a href="./index.html"><img src="./img/logo/logo.png" alt="bookstore logo" class="logo"></a>
       </div>
-      <div class="col-6 d-flex justify-content-end align-items-center ps-1 pt-3 pb-3">
-        <a href="#"><img src="./img/logo/logoCart.png" alt="cart logo" class="logoCart"></a>
+      <div class="col-6 d-flex justify-content-end align-items-center ps-1 pt-3 pe-5 pb-3">
+        <a href="#" id="cart_button" title="Show Cart"></a>
       </div>
     </header>
 
     <!-- Main -->
     <main class="main row">
-
-      <!-- Promotions Section -->
-      <section>
-
-      </section>
-
-      <!-- Classic Section -->
       <section class="col-12 mainSection">
-        <h3>Classics</h3>
-      </section>
-
-      <!-- Fantasy Section -->
-      <section class="col-12 mainSection">
-        <h3>Fantasy</h3>
-      </section>
-
-      <!-- Horror Section -->
-      <section class="col-12 mainSection">
-        <h3>Horror</h3>
-      </section>
-
-      <!-- Romantic Section -->
-      <section class="col-12 mainSection">
-        <h3>Romantic</h3>
-      </section>
-      
-      <!-- Science Fiction Section -->
-      <section class="col-12 mainSection">
-        <h3>Science Fiction</h3>
+        <div id="books" class="row"></div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer class="footer row">
-      <div>
-        
-      </div>
-      <div class="footerSection col ps-5 pb-4">
-        <a href="./pages/classics.html"><h3>Classics</h3></a>
-        <p>A Study in Scarlet</p>
-        <p>The Adventures of Sherlock Holmes</p>
-        <p>The Hound of the Beaskervilles</p>
-        <p>The Memoirs of Sherlock Holmes</p>
-        <p>The Return of Sherlock Holmes</p>
-        <p>Hamlet</p>
-        <p>Julius Caesar</p>
-        <p>Romeo and Juliet</p>
-        <p>The Picture of Dorian Gray</p>
-      </div>
-      <div class="footerSection col pb-4">
-        <a href="./pages/fantasy.html"><h3>Fantasy</h3></a>
-        <p>Harry Potter 1</p>
-        <p>Harry Potter 2</p>
-        <p>Harry Potter 3</p>
-        <p>Harry Potter 4</p>
-        <p>Harry Potter 5</p>
-        <p>Harry Potter 6</p>
-        <p>Harry Potter 7</p>
-        <p>The Lord of the Rings 1</p>
-        <p>The Lord of the Rings 2</p>
-        <p>The Lord of the Rings 3</p>
-      </div>
-      <div class="footerSection col pb-4">
-        <a href="./pages/horror.html"><h3>Horror</h3></a>
-        <p>Carrie</p>
-        <p>The Shining</p>
-        <p>The Black Cat</p>
-        <p>The Cask of Amontillado</p>
-        <p>The Fall of the House of Usher</p>
-        <p>The Masque of the Red Death</p>
-        <p>The Raver</p>
-        <p>The Tell-Tale Heart</p>
-      </div>
-      <div class="footerSection col pb-4">
-        <a href="./pages/romantic.html"><h3>Romantic</h3></a>
-        <p>A Walk to Remember</p>
-        <p>Dreamland</p>
-        <p>The Longest Ride</p>
-        <p>The Notebook</p>
-        <p>Emma</p>
-        <p>Persuasion</p>
-        <p>Pride & Prejudice</p>
-        <p>Sense & Sensibility</p>
-      </div>
-      <div class="footerSection col pe-3 pb-4">
-        <a href="./pages/scienceFiction.html"><h3>Science Fiction</h3></a>
-        <p>The Hunger Games 1</p>
-        <p>The Hunger Games 2</p>
-        <p>The Hunger Games 3</p>
-        <p>The Hunger Games 4</p>
-        <p>Around the World in Eigthy Days</p>
-        <p>Journey to the Center of the Earth</p>
-        <p>The Mysterious Island</p>
-        <p>Dune</p>
-        <p>I, Robot</p>
-        <p>1984</p>
-      </div>
+    <footer class="footer row d-flex justify-content-evenly p-3">
+      <ul class="footerSection col">
+        <li><h3>Classics</h3></li>
+        <li>A Study in Scarlet</li>
+        <li>The Adventures of Sherlock Holmes</li>
+        <li>The Hound of the Beaskervilles</li>
+        <li>The Memoirs of Sherlock Holmes</li>
+        <li>The Return of Sherlock Holmes</li>
+        <li>Hamlet</li>
+        <li>Julius Caesar</li>
+        <li>Romeo and Juliet</li>
+        <li>The Picture of Dorian Gray</li>
+      </ul>
+
+      <ul class="footerSection col">
+        <li><h3>Fantasy</h3></li>
+        <li>Harry Potter 1</li>
+        <li>Harry Potter 2</li>
+        <li>Harry Potter 3</li>
+        <li>Harry Potter 4</li>
+        <li>Harry Potter 5</li>
+        <li>Harry Potter 6</li>
+        <li>Harry Potter 7</li>
+        <li>The Lord of the Rings 1</li>
+        <li>The Lord of the Rings 2</li>
+        <li>The Lord of the Rings 3</li>
+      </ul>
+
+      <ul class="footerSection col">
+        <li><h3>Horror</h3></li>
+        <li>Carrie</li>
+        <li>The Shining</li>
+        <li>The Black Cat</li>
+        <li>The Cask of Amontillado</li>
+        <li>The Fall of the House of Usher</li>
+        <li>The Masque of the Red Death</li>
+        <li>The Raver</li>
+        <li>The Tell-Tale Heart</li>
+      </ul>
+
+      <ul class="footerSection col">
+        <li><h3>Romantic</h3></li>
+        <li>A Walk to Remember</li>
+        <li>Dreamland</li>
+        <li>The Longest Ride</li>
+        <li>The Notebook</li>
+        <li>Emma</li>
+        <li>Persuasion</li>
+        <li>Pride & Prejudice</li>
+        <li>Sense & Sensibility</li>
+      </ul>
+
+      <ul class="footerSection col">
+        <li><h3>Science Fiction</h3></li>
+        <li>The Hunger Games 1</li>
+        <li>The Hunger Games 2</li>
+        <li>The Hunger Games 3</li>
+        <li>The Hunger Games 4</li>
+        <li>Around the World in Eigthy Days</li>
+        <li>Journey to the Center of the Earth</li>
+        <li>The Mysterious Island</li>
+        <li>Dune</li>
+        <li>I, Robot</li>
+        <li>1984</li>
+      </ul>
+
       <div class="containerLogos ps-5 pt-4 pb-3">
         <a href="https://wa.me/2236015315" rel="noopener" target="_blank"><img src="./img/socialMedia/whatsAppLogo.png" alt="whatsapp logo" class="p-1"></a>
         <a href="https://twitter.com/eze_santalla" rel="noopener" target="_blank"><img src="./img/socialMedia/twitterLogo.png" alt="twitter logo" class="p-1"></a>
@@ -127,10 +102,13 @@
         <a href="https://www.linkedin.com/in/ezesantalla/" rel="noopener" target="_blank"><img src="./img/socialMedia/linkedInLogo.png" alt="linkedIn logo" class="p-1"></a>
         <a href="https://github.com/ezequiel-santalla" rel="noopener" target="_blank"><img src="./img/socialMedia/gitHubLogo.png" alt="gitHub logo" class="p-1"></a>
       </div>
+
       <div class="containerCopyright ps-5 pt-3">
         <p>Copyright © 2022 All Rights Reserved by Ezequiel Santalla</p>
       </div>
     </footer>
+    <script src="./js/books.js"></script>
+    <script src="./js/cart.js"></script>
     <script src="./js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
