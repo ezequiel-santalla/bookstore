@@ -60,10 +60,22 @@ const totalCart = () => {
   return cart_books.reduce((total, item) => total += item.quantity, 0);
 }
 
-const sumCart = () => {
+const subtotal = () => {
   const cart_books = loadBooksCart();
 
   return cart_books.reduce((total, item) => total += item.quantity * item.price, 0);
+}
+
+const tax = () => {
+  const cart_books = loadBooksCart();
+  
+  return cart_books.reduce((total, item) => total += item.quantity * item.price * 0.085, 0);
+}
+
+const sumCart = () => {
+  const cart_books = loadBooksCart();
+
+  return cart_books.reduce((total, item) => total += item.quantity * item.price + item.quantity * item.price * 0.085, 0);
 }
 
 const renderCartButton = () => {

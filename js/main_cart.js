@@ -13,15 +13,25 @@ const renderBooksCart = () => {
       output +=   `<tr>
                     <td class="pt-3 pb-3"><img src="img/books/${book.image}" alt="${book.name}" width="96"></td>
                     <td class="align-middle fs-6"><b>Title:</b> ${book.name}<br><b>Author:</b> ${book.author}<br><b>Category:</b> ${book.category}</td>
-                    <td class="align-middle fs-6"><button class="btn btn-dark rounded" title="Delete Item" onClick="deleteBookItem(${book.id})">-</button><b> ${book.quantity} x US$${book.price} </b><button class="btn btn-dark rounded" title="Add Item" onClick="addBookItem(${book.id})">+</button></td>
-                    <td class="align-middle text-center pt-3 fs-6"><b>US$${book.quantity * book.price}</b></td>
+                    <td class="align-middle fs-6"><button class="btn btn-dark rounded" title="Delete Item" onClick="deleteBookItem(${book.id})">-</button> ${book.quantity} x US$${book.price} <button class="btn btn-dark rounded" title="Add Item" onClick="addBookItem(${book.id})">+</button></td>
+                    <td class="align-middle text-start pt-3 fs-6">US$${book.quantity * book.price}</td>
                     <td class="align-middle text-end"><a href="#" title="Delete Book"><img src="img/trash.png" alt="Delete Book" onClick="deleteItemCart(${book.id});" width="32"></a></td>
                   </tr>`;
     }
 
     output +=     `<tr>
-                    <td colspan="3" class="fs-6 text-start"><b>Total to pay:</b></td>
-                    <td class="fs-6 text-center"><b>US$${sumCart().toFixed(2)}</b></td>
+                    <td colspan="3" class="fs-6 text-start">Subtotal</td>
+                    <td class="fs-6 text-start">US$${subtotal().toFixed(2)}</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="fs-6 text-start">Estimated Tax</td>
+                    <td class="fs-6 text-start">US$${tax().toFixed(2)}</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="fs-3 text-start"><b>Total</b></td>
+                    <td class="fs-3 text-start"><b>US$${sumCart().toFixed(2)}</b></td>
                     <td>&nbsp;</td>
                   </tr>
                 </tbody>
