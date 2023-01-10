@@ -1,15 +1,15 @@
 const books = [
   
   // Classics
-  {id: 1, name: "A Study in Scarlet", price: 9.99, author: "Arthur Conan Doyle", image: "aStudyInScarlet.png", category: "Classics"},
-  {id: 2, name: "The Adventures of Sherlock Holmes", price: 9.99, author: "Arthur Conan Doyle", image: "theAdventuresOfSherlockHolmes.png", category: "Classics"},
-  {id: 3, name: "The Hound of the Beaskervilles", price: 9.99, author: "Arthur Conan Doyle", image: "theHoundOfTheBaskervilles.png", category: "Classics"},
-  {id: 4, name: "The Memoirs of Sherlock Holmes", price: 9.99, author: "Arthur Conan Doyle", image: "theMemoirsOfSherlockHolmes.png", category: "Classics"},
-  {id: 5, name: "The Return of Sherlock Holmes", price: 9.99, author: "Arthur Conan Doyle", image: "theReturnOfSherlockHolmes.png", category: "Classics"},
-  {id: 6, name: "The Picture of Dorian Gray", price: 9.99, author: "Oscar Wilde", image: "thePictureOfDorianGray.png", category: "Classics"},
-  {id: 7, name: "Hamlet", price: 9.99, author: "William Shakespeare", image: "hamlet.png", category: "Classics"},
-  {id: 8, name: "Julius Caesar", price: 9.99, author: "William Shakespeare", image: "juliusCaesar.png", category: "Classics"},
-  {id: 9, name: "Romeo and Juliet", price: 9.99, author: "William Shakespeare", image: "romeoAndJuliet.png", category: "Classics"},
+  {id: 1, name: "A Study in Scarlet", price: 9.99, author: "Arthur Conan Doyle", image: "aStudyInScarlet.png", category: "Classic", description: "A body found in strange circumstances triggers Holmes's deductive reflexes, while the official police lose themselves in misguided wanderings or arrest innocent citizens. A new murder seems to complicate the story, but it clears it up for Holmes."},
+  {id: 2, name: "The Adventures of Sherlock Holmes", price: 9.99, author: "Arthur Conan Doyle", image: "theAdventuresOfSherlockHolmes.png", category: "Classic"},
+  {id: 3, name: "The Hound of the Beaskervilles", price: 9.99, author: "Arthur Conan Doyle", image: "theHoundOfTheBaskervilles.png", category: "Classic"},
+  {id: 4, name: "The Memoirs of Sherlock Holmes", price: 9.99, author: "Arthur Conan Doyle", image: "theMemoirsOfSherlockHolmes.png", category: "Classic"},
+  {id: 5, name: "The Return of Sherlock Holmes", price: 9.99, author: "Arthur Conan Doyle", image: "theReturnOfSherlockHolmes.png", category: "Classic"},
+  {id: 6, name: "The Picture of Dorian Gray", price: 9.99, author: "Oscar Wilde", image: "thePictureOfDorianGray.png", category: "Classic"},
+  {id: 7, name: "Hamlet", price: 9.99, author: "William Shakespeare", image: "hamlet.png", category: "Classic"},
+  {id: 8, name: "Julius Caesar", price: 9.99, author: "William Shakespeare", image: "juliusCaesar.png", category: "Classic"},
+  {id: 9, name: "Romeo and Juliet", price: 9.99, author: "William Shakespeare", image: "romeoAndJuliet.png", category: "Classic"},
 
   // Fantasy
   {id: 10, name: "Harry Potter 1", price: 10.99, author: "J.K Rowling", image: "hp1.png", category: "Fantasy"},
