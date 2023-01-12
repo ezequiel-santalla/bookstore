@@ -13,7 +13,7 @@ const renderBooksCart = () => {
       output +=   `<tr>
                     <td class="pt-3 pb-3"><img src="img/books/${book.image}" alt="${book.name}" width="96"></td>
                     <td class="align-middle fs-6"><b>Title:</b> ${book.name}<br><b>Author:</b> ${book.author}<br><b>Category:</b> ${book.category}</td>
-                    <td class="align-middle fs-6"><button class="btn btn-dark rounded" title="Delete Item" onClick="deleteBookItem(${book.id})">-</button> ${book.quantity} x US$${book.price} <button class="btn btn-dark rounded" title="Add Item" onClick="addBookItem(${book.id})">+</button></td>
+                    <td class="align-middle fs-6 pt-3"><button class="btn btn-dark rounded" title="Delete Item" onClick="deleteBookItem(${book.id})">-</button> ${book.quantity} x US$${book.price} <button class="btn btn-dark rounded" title="Add Item" onClick="addBookItem(${book.id})">+</button></td>
                     <td class="align-middle text-start pt-3 fs-6">US$${book.quantity * book.price}</td>
                     <td class="align-middle text-end"><a href="#" title="Delete Book"><img src="img/trash.png" alt="Delete Book" onClick="deleteItemCart(${book.id});" width="32"></a></td>
                   </tr>`;

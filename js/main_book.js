@@ -8,7 +8,7 @@ const renderBook = () => {
                   <h4 class="pt-1 pb-1">${book.author}</h4>
                   <h5 class="pt-1 pb-1">${book.category}</h5>
                   <p class="pt-1 pb-1">${book.description}</p>
-                  <p><b>US$${book.price}</b></p>
+                  <p>US$${book.price}</p>
                   <p><a href="#" class="btn btn-info" onClick="addToCart(${book.id});">Add (+)</a></b></p>
                 </div>`;
   
