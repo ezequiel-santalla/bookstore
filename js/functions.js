@@ -23,7 +23,6 @@ const bookInCart = (id) => {
 }
 
 const addToCart = (id) => {
-  const books = loadBooksLS();
   const cart_books = loadBooksCart();
 
   if (bookInCart(id)) {
@@ -111,7 +110,5 @@ const deleteBookItem = (id) => {
 }
 
 const searchBook = (id) => {
-  const books = loadBooksLS();
-
   return books.find(item => item.id === id);
 }
