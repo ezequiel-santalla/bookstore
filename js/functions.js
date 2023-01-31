@@ -113,3 +113,13 @@ const searchBook = (id) => {
   return books.find(item => item.id === id);
 }
 
+function purchaseMade() {
+  Swal.fire({
+    position: "top-center",
+    icon: "success",
+    title: "Congratulations on your purchase!",
+    text: "We hope to see you again!",
+    showConfirmationButton: true,
+    confirmButtonText: "Accept",
+  })
+}

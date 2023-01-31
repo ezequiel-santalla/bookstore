@@ -34,6 +34,9 @@ const renderBooksCart = () => {
                     <td class="fs-3 text-start"><b>US$${sumCart().toFixed(2)}</b></td>
                     <td>&nbsp;</td>
                   </tr>
+                  <tr>
+                    <td colspan="5" class="text-end"><a href="#" class="btn btn-info" onClick="purchaseMade()">Buy Now!</a></td>
+                  </tr>
                 </tbody>
               </table>`;
   }
