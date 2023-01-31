@@ -3,7 +3,7 @@ const renderBooks = () => {
   let output = "";
 
   for (let book of books) {
-    output += `<div class="col-md-2 mb-4 mt-2" id="${book.id}">
+    output += `<div class="col-md-2 mb-4 mt-2">
                 <a href="#" onClick="seeBook(${book.id});" class="text-decoration-none text-dark">
                   <div class"card">
                     <img src="img/books/${book.image}" alt="${book.name}" class="card-img-top">
