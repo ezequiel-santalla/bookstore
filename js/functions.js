@@ -1,5 +1,5 @@
 const storeBooksCart = (books) => {
-  localStorage.setItem("cart", JSON.stringify(books));
+  Storage.setItem("cart", JSON.stringify(books));
 }
 
 const loadBooksCart = () => {
@@ -109,6 +109,22 @@ const deleteBookItem = (id) => {
   }
 }
 
-const searchBook = (id) => {
-  return books.find(item => item.id === id);
+
+
+const searchBook = () => {
+  const books = loadBooksLS();
+  searchText = getElementById("searchText").value;
+
+
+  if (searchText.length > 2) {
+    let pos = keywords.findIndex(item => item.name.includes(searchText));
+
+    if (pos > -1) {
+        document.getElementById("books").value = books[pos];
+    }
 }
+
+}
+
+let searchText = getElementById("searchText");
+searchText.addEventListener("input", searchBook)
